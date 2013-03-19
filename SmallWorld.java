@@ -44,6 +44,7 @@ import org.apache.hadoop.util.GenericOptionsParser;
 public class SmallWorld {
     // Maximum depth for any breadth-first search
     public static final int MAX_ITERATIONS = 20;
+    public static final int NUM_REDUCERS = 24;
 
     // Example writable type
     public static class EValue implements Writable {
@@ -361,6 +362,9 @@ public class SmallWorld {
         FileInputFormat.addInputPath(job, new Path(args[0]));
         FileOutputFormat.setOutputPath(job, new Path("bfs-0-out"));
 
+	// Sets the number of reducers.
+	job.setNumReduceTasks(NUM_REDUCERS);
+
         // Actually starts job, and waits for it to finish
         job.waitForCompletion(true);
 
@@ -385,6 +389,9 @@ public class SmallWorld {
             // Notice how each mapreduce job gets gets its own output dir
             FileInputFormat.addInputPath(job, new Path("bfs-" + i + "-out"));
             FileOutputFormat.setOutputPath(job, new Path("bfs-"+ (i+1) +"-out"));
+
+	    // Sets the number of reducers.
+	    job.setNumReduceTasks(NUM_REDUCERS);
 
             job.waitForCompletion(true);
             i++;
@@ -414,6 +421,9 @@ public class SmallWorld {
         // here to get last bfs output to be input to histogram
         FileInputFormat.addInputPath(job, new Path("bfs-"+ i +"-out"));
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
+
+	// Sets the number of reducers.
+	job.setNumReduceTasks(1);
 
         job.waitForCompletion(true);
     }
