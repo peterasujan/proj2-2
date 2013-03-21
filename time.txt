@@ -4,11 +4,12 @@
 
 9 machines:
 2 hours (hollywood)
+1 hour (hollywood-2)
 
 12 machines:
 1 hour (hollywood)
 
 actual job timings:
 6: 73 min.
-9: 72 min.
+9: 47 min.
 12: 38 min.
