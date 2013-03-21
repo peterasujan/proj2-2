@@ -1,0 +1,14 @@
+6 machines:
+1 hour (ring4)
+2 hours (hollywood)
+
+9 machines:
+2 hours (hollywood)
+
+12 machines:
+1 hour (hollywood)
+
+actual job timings:
+6: 73 min.
+9: 72 min.
+12: 38 min.
