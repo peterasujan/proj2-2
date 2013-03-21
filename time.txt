@@ -11,5 +11,5 @@
 
 actual job timings:
 6: 73 min.
-9: 47 min.
+9: 47 min. (also 72 min.)
 12: 38 min.
