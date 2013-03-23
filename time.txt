@@ -1,6 +1,6 @@
 6 machines:
 1 hour (ring4)
-2 hours (hollywood)
+3 hours (hollywood)
 
 9 machines:
 2 hours (hollywood)
